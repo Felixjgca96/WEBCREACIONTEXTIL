@@ -1,9 +1,15 @@
  #root {
   /* border: 2px solid green; */
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 0;
 
 } 
+h1 {
+  position: relative;
 
+  z-index: -2;
+
+}
