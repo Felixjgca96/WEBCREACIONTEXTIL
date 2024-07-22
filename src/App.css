@@ -1,0 +1,9 @@
+ #root {
+  /* border: 2px solid green; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+
+} 
+
