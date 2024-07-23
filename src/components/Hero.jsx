@@ -48,6 +48,7 @@ const HeroContainerStyled = styled.section`
   border-radius: 100px;
   width: 100%;
   color: black;
+  z-index: -2;
 
 
   @media (max-width: 900px) {
