@@ -4,13 +4,14 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import Navbar from './components/Navbar'
 import ButtonWa from './components/ButtonWa'
+import Hero from './components/Hero'
 
 function App() {
 
   return (
     <>
       <Navbar/>
-      <h1>te amoooooooooo</h1>
+      <Hero/>
       <ButtonWa/>
       
     </>
