@@ -27,18 +27,17 @@ function Navbar ( ) {
           <img src="./logo.png" alt="" className='logo'/>
         </a>
           
-          <div className= {`links ${clicked ? 'active' : ''}`}>
-              <a onClick={handleClick} href="/">Inicio</a>
-              <a onClick={handleClick} href="/">Productos</a>
-              <a onClick={handleClick} href="/">Quienes Somos</a>
-              <a onClick={handleClick} href="/">Medios de Pago</a>
-
-              <a onClick={handleClick}href="/">Contacto</a>
-          </div>
-          <div className='burguer'>
-          <BurguerButton clicked={clicked} handleClick={handleClick}/>
-          </div>
-          <BgDiv className={`initial ${clicked ? 'active' : ''}`}></BgDiv>
+        <div className= {`links ${clicked ? 'active' : ''}`}>
+            <a onClick={handleClick} href="/">Inicio</a>
+            <a onClick={handleClick} href="/">Productos</a>
+            <a onClick={handleClick} href="/">Quienes Somos</a>
+            <a onClick={handleClick} href="/">Medios de Pago</a>
+            <a onClick={handleClick}href="/">Contacto</a>
+        </div>
+        <div className='burguer'>
+        <BurguerButton clicked={clicked} handleClick={handleClick}/>
+        </div>
+        <BgDiv className={`initial ${clicked ? 'active' : ''}`}></BgDiv>
           
       </NavContainer>
       </>
@@ -47,6 +46,14 @@ function Navbar ( ) {
 export default Navbar
 
 const NavContainer = styled.nav`
+background-color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1500px;
+  /* border: 2px solid red; */
+
   h2{
     color: white;
     font-weight: 400;
@@ -65,19 +72,6 @@ const NavContainer = styled.nav`
     margin-left:0.5rem;
 
   }
-
-  background-color: #333;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 2px;
-  border-radius:5px;
-  width: 100%;
-  max-width: 1300px;
-  /* border: 2px solid red; */
-
-
-
 
   a {
     color:white;
@@ -143,7 +137,7 @@ position: absolute;
 background-color: #222;
 top: -700;
 left: -1000;
-z-index: -1;
+z-index: -2;
 transition: all .6s ease ;
 
 
@@ -153,6 +147,7 @@ transition: all .6s ease ;
   left: 0;
   width: 100%;
   height: 100%;
+  
 }
 
 `

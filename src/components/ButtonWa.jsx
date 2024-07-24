@@ -30,7 +30,7 @@ const ButtonWaChat = styled.div`
     transition: all 300ms ease;
 }
 .btn-wsp:hover{
-    background: #20ba5a;
+    background: #272727;
 }
 @media only screen and (min-width:320px) and (max-width:768px){
     .btn-wsp{
