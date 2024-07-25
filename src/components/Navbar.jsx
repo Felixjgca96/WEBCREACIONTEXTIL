@@ -5,7 +5,7 @@ import Hero from './Hero';
 
 
 
-function NavbarHero ( ) {
+function Navbar ( ) {
   const [clicked, setClicked]= useState (false)
   const handleClick = () => {
     //cuando esta true lo pasa a false y vice versa
@@ -40,17 +40,17 @@ function NavbarHero ( ) {
         </div>
         <BgDiv className={`initial ${clicked ? 'active' : ''}`}></BgDiv>
       </NavContainer>
-      <Hero/>
       </NavHero>
   )  
 }
-export default NavbarHero
+export default Navbar
 
 const NavHero = styled.nav`
   display: flex;
   flex-direction:column;
   width: 100%;
   max-width: 1500px;
+  z-index: 0;
 
 
 
@@ -60,6 +60,16 @@ const NavContainer = styled.nav`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  width: 100%;
+  max-width: 1500px;
+  position: fixed; 
+  top: 0;
+  background: #222;
+  border-radius: 0 0 10px 10px;
+  border-bottom: 2px solid #ffffff;  
+
+  
+
 
 
 
@@ -89,7 +99,7 @@ const NavContainer = styled.nav`
   a {
     color:white;
     text-decoration: none;
-    margin-right:2rem;
+    margin-right:1rem;
   }
   .links {
     position: absolute;
@@ -133,7 +143,7 @@ const NavContainer = styled.nav`
     position: absolute;
     margin-left: auto;
     margin-right: auto;
-    top: 15%;
+    top: 110px;
     left: 0;
     right: 0;
     text-align: center;
@@ -166,10 +176,10 @@ transition: all .6s ease ;
 
 &.active{
   border-radius: 0 0 60% 0;
-  top: 100px;
+  top: 102px;
   left: 0;
   width: 100%;
-  height: 80%;
+  height: 400px;
 
   
 }

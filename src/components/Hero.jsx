@@ -34,6 +34,7 @@ align-items: center;
 text-align: center;
 color: #fff;
 height: 500px;
+margin-top: 70px;
 
 
   .hero__contenido {
@@ -41,6 +42,7 @@ height: 500px;
     flex-direction:column;
     justify-content: center;
     text-align: center;
+    
   }
 
   .hero__titulo {
