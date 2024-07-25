@@ -7,8 +7,8 @@ function Services ( ) {
         <section class="services-section">
             <article class="services__cards container">
                 <div class="services__cards-info">
-                    <h2>Nuestros servicios</h2>
-                    <p>En PureFruit, nos esforzamos por brindarte servicios excepcionales que complementen la frescura y calidad de nuestras frutas. Explora lo que ofrecemos para hacer tu experiencia de compra aún más satisfactoria</p>
+                    <h2>Acerca de Nuestros Servicios</h2>
+                    <p>Misión, garantía y servicios de alta calidad para ti.</p>
                 </div>   
                 <div class="services__cards-card">
                     <div class="service__card">
@@ -27,7 +27,6 @@ function Services ( ) {
                         <p>Ofrecemos prendas a medida, tapizado de muebles, bordados personalizados, estampados en textiles y materiales, e impresión de imágenes en productos.</p>
                     </div>
                 </div>  
-                <a href="#" class="button button-primary">Saber más</a>
             </article>        
         </section>
     </ServicesSection>
@@ -68,6 +67,8 @@ const ServicesSection = styled.div`
   font-size: 1.1rem;
   color: white;
   margin-bottom: 1rem;
+  font-weight: bold;
+
 }
 
 .services__cards-card {
@@ -126,44 +127,5 @@ const ServicesSection = styled.div`
   }
 } 
 
-.button {
-    font-size: 1.1rem;
-    padding: 10px 20px;
-    font-weight: 700;    
-    cursor: pointer;
-    border-radius: 5px;
-}
-
-.button-primary {
-    color: white;
-    background-color: #222;
-}
-
-.button-primary:hover {
-    background-color: white;
-    transition: background-color 0.3s;
-    color: black;
-}
-
-.button-secondary {
-    color: white;
-    background-color: purple;
-}
-
-.button-secondary:hover {
-    background-color: pink;
-    color: purple;
-    transition: background-color 0.3s;
-}
-
-.input {
-    border: none;
-    font-size: 1.1rem;
-    background-color: white;
-    padding: 10px;
-    outline: none;
-    color: purple;
-    border-radius: 5px;
-}
 
 `

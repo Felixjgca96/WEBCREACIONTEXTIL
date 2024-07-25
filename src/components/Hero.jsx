@@ -58,6 +58,8 @@ margin-top: 70px;
     text-align: center;
     margin-bottom: 20px;
     gap: 15px;
+    font-weight: bold;
+
   }
   .hero__descripcion__puno {
     font-size: 26px;

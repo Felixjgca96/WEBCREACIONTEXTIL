@@ -29,11 +29,11 @@ function Navbar ( ) {
         </a>
           
         <div className= {`links ${clicked ? 'active' : ''}`}>
-            <a onClick={handleClick} href="/">Inicio</a>
-            <a onClick={handleClick} href="/">Productos</a>
-            <a onClick={handleClick} href="/">Quienes Somos</a>
-            <a onClick={handleClick} href="/">Medios de Pago</a>
-            <a onClick={handleClick}href="/">Contacto</a>
+            <a href="/">Inicio</a>
+            <a href="/">Productos</a>
+            <a href="/">Quienes Somos</a>
+            <a href="/">Medios de Pago</a>
+            <a href="/">Contacto</a>
         </div>
         <div className='burguer'>
         <BurguerButton clicked={clicked} handleClick={handleClick}/>
@@ -65,8 +65,7 @@ const NavContainer = styled.nav`
   position: fixed; 
   top: 0;
   background: #222;
-  border-radius: 0 0 10px 10px;
-  border-bottom: 2px solid #ffffff;  
+ 
 
   
 
@@ -79,6 +78,7 @@ const NavContainer = styled.nav`
   h2{
     color: white;
     font-weight: 400;
+
     span{
       font-weight: bold;
     }
@@ -111,6 +111,7 @@ const NavContainer = styled.nav`
     text-align: center;
     transition: all .5s ease;
 
+
    
 
 
@@ -124,14 +125,30 @@ const NavContainer = styled.nav`
       align-items: center;
       text-align: center;
 
+
+      
+
     }
     @media(min-width: 768px){
       position: initial;
       margin:0px;
+      
       a {
         font-size: 1rem;
-        color: white;
         display: inline;
+        color: white;
+        padding: 5px 10px; 
+        border-radius: 5px;
+        font-weight: 700;
+
+
+        
+
+      }
+      a:hover {
+          background-color: white;
+          transition: background-color 0.3s;
+          color: black; 
       }
 
     }
@@ -139,22 +156,35 @@ const NavContainer = styled.nav`
 
   .links.active{
     width: 100%;
-    display: block;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
     position: absolute;
     margin-left: auto;
     margin-right: auto;
-    top: 110px;
+    top: 120px;
     left: 0;
     right: 0;
     text-align: center;
     z-index: 2;
+    
 
 
-    a{
+    a{        
       font-size: 2rem;
       margin-top: 1rem;
       color: white;
+      border-radius: 5px;
+      width: 270px;
+
+      
     }
+    a:hover {
+          background-color: white;
+          transition: background-color 0.3s;
+          color: black; 
+
+      }
   }
   
   .burguer {
@@ -172,14 +202,15 @@ top: -700;
 left: -1000;
 z-index: 0;
 transition: all .6s ease ;
+border: 2px solid gray;
 
 
 &.active{
   border-radius: 0 0 60% 0;
-  top: 102px;
+  top: 100px;
   left: 0;
   width: 100%;
-  height: 400px;
+  height: 450px;
 
   
 }
