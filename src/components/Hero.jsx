@@ -34,7 +34,6 @@ align-items: center;
 text-align: center;
 color: #fff;
 height: 500px;
-border: 5px solid red;
 
 
   .hero__contenido {
@@ -42,7 +41,6 @@ border: 5px solid red;
     flex-direction:column;
     justify-content: center;
     text-align: center;
-    border: 5px solid yellow;
   }
 
   .hero__titulo {
@@ -50,34 +48,37 @@ border: 5px solid red;
     font-weight: bold;
     margin: 0;
     margin-bottom: 20px;
-    border: 5px solid red;
     text-align: center;
-  }
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black;  }
 
   .hero__descripcion {
     display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    border: 5px solid green;
     margin-bottom: 20px;
     gap: 15px;
   }
   .hero__descripcion__puno {
-    font-size: 24px;
+    font-size: 26px;
     display: flex;
     justify-content: center;
     text-align: center;
-    border: 5px solid red;
     margin: 0;
+    -webkit-text-stroke-width: 0.5px;
+    -webkit-text-stroke-color: black;
+    color: white;
   }
   .hero__descripcion__pdos {
-    font-size: 18px;
+    font-size: 20px;
     display: flex;
     justify-content: center;
     text-align: center;
-    border: 5px solid red;
     margin: 0;
+    -webkit-text-stroke-width: 0.5px;
+    -webkit-text-stroke-color: black;
+    color: white;
   }
 `
 
@@ -100,6 +101,7 @@ const ButtonContactanos = styled.div`
 
   .hero__boton:hover {
     background-image: linear-gradient(to right, #2e2f30, #838485);
+  
   }
 
 `

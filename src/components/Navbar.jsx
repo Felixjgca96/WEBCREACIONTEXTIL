@@ -90,7 +90,7 @@ const NavContainer = styled.nav`
   a {
     color:white;
     text-decoration: none;
-    margin-right:1rem;
+    margin-right:2rem;
   }
   .links {
     position: absolute;
@@ -101,15 +101,25 @@ const NavContainer = styled.nav`
     margin-right: auto;
     text-align: center;
     transition: all .5s ease;
+    :hover {
+      color: black;
+      -webkit-text-stroke-width: 1px;
+      -webkit-text-stroke-color: #ffffff;
+    }
+   
+
+
 
     
     a{
       color: white;
-      font-size:2rem;
+      font-size:2.5rem;
       display: flex;
       justify-content: center;
       align-items: center;
       text-align: center;
+      -webkit-text-stroke-width: 0.5px;
+      -webkit-text-stroke-color: black;
     }
     @media(min-width: 768px){
       position: initial;
