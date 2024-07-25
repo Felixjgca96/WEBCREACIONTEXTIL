@@ -56,7 +56,7 @@ const ServicesSection = styled.div`
 }
 
 .services__cards-info h2 {
-  font-size: 2rem;
+  font-size: 1.7rem;
   font-weight: 900;
   color: white;
   margin-bottom: 1rem;
@@ -64,7 +64,7 @@ const ServicesSection = styled.div`
 }
 
 .services__cards-info p {
-  font-size: 1.1rem;
+  font-size: 1rem;
   color: white;
   margin-bottom: 1rem;
   font-weight: bold;

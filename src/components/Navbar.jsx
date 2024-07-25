@@ -203,13 +203,14 @@ left: -1000;
 z-index: 0;
 transition: all .6s ease ;
 border: 2px solid gray;
+opacity: 99%;
 
 
 &.active{
   border-radius: 0 0 60% 0;
   top: 100px;
   left: 0;
-  width: 100%;
+  width: 99%;
   height: 450px;
 
   
