@@ -49,8 +49,7 @@ height: 500px;
     margin: 0;
     margin-bottom: 20px;
     text-align: center;
-    -webkit-text-stroke-width: 2px;
-    -webkit-text-stroke-color: black;  }
+  }
 
   .hero__descripcion {
     display: flex;
@@ -66,9 +65,7 @@ height: 500px;
     justify-content: center;
     text-align: center;
     margin: 0;
-    -webkit-text-stroke-width: 0.5px;
-    -webkit-text-stroke-color: black;
-    color: white;
+
   }
   .hero__descripcion__pdos {
     font-size: 20px;
@@ -76,9 +73,7 @@ height: 500px;
     justify-content: center;
     text-align: center;
     margin: 0;
-    -webkit-text-stroke-width: 0.5px;
-    -webkit-text-stroke-color: black;
-    color: white;
+
   }
 `
 

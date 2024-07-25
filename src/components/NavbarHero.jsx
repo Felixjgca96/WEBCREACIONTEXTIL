@@ -5,7 +5,7 @@ import Hero from './Hero';
 
 
 
-function Navbar ( ) {
+function NavbarHero ( ) {
   const [clicked, setClicked]= useState (false)
   const handleClick = () => {
     //cuando esta true lo pasa a false y vice versa
@@ -44,14 +44,14 @@ function Navbar ( ) {
       </NavHero>
   )  
 }
-export default Navbar
+export default NavbarHero
 
 const NavHero = styled.nav`
   display: flex;
   flex-direction:column;
   width: 100%;
   max-width: 1500px;
-  background-image: url('./fondo.png');
+  background-image: url('./fondoopaco.png');
   background-repeat: no-repeat;
   background-size:100% 100%;
 
@@ -101,11 +101,7 @@ const NavContainer = styled.nav`
     margin-right: auto;
     text-align: center;
     transition: all .5s ease;
-    :hover {
-      color: black;
-      -webkit-text-stroke-width: 1px;
-      -webkit-text-stroke-color: #ffffff;
-    }
+
    
 
 
@@ -118,8 +114,7 @@ const NavContainer = styled.nav`
       justify-content: center;
       align-items: center;
       text-align: center;
-      -webkit-text-stroke-width: 0.5px;
-      -webkit-text-stroke-color: black;
+
     }
     @media(min-width: 768px){
       position: initial;
