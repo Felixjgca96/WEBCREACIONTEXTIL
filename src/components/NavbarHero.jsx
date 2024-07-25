@@ -51,9 +51,7 @@ const NavHero = styled.nav`
   flex-direction:column;
   width: 100%;
   max-width: 1500px;
-  background-image: url('./fondo3.png');
-  background-repeat: no-repeat;
-  background-size:100% 100%;
+
 
 
 `

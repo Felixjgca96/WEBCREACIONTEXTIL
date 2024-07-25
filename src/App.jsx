@@ -11,6 +11,12 @@ function App() {
   return (
     <>
       <NavbarHero/>
+      <Hero/>
+
+      <Hero/>
+      <Hero/>
+
+      <Hero/>
       <ButtonWa/>
       
     </>
