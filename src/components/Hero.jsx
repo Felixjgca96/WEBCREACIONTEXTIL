@@ -33,7 +33,7 @@ color: #fff;
 width: 100%;
 height: 500px;
 max-width: 1500px;
-background-image: url('/fondo.png');
+background-image: url('./fondo.gif');
 background-repeat: no-repeat;
 background-size:100% 100%;
 
