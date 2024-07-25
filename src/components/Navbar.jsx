@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import styled from 'styled-components'
 import BurguerButton from './BurguerButton';
+import Hero from './Hero';
 
 
 
@@ -21,7 +22,7 @@ function Navbar ( ) {
   }, []);
 
   return (
-      <>
+      <NavHero>
       <NavContainer>
         <a href="">
           <img src="./logo.png" alt="" className='logo'/>
@@ -38,20 +39,32 @@ function Navbar ( ) {
         <BurguerButton clicked={clicked} handleClick={handleClick}/>
         </div>
         <BgDiv className={`initial ${clicked ? 'active' : ''}`}></BgDiv>
-          
       </NavContainer>
-      </>
+      <Hero/>
+      </NavHero>
   )  
 }
 export default Navbar
 
+const NavHero = styled.nav`
+  display: flex;
+  flex-direction:column;
+  width: 100%;
+  max-width: 1500px;
+  background-image: url('./fondo.png');
+  background-repeat: no-repeat;
+  background-size:100% 100%;
+
+
+`
 const NavContainer = styled.nav`
-background-color: #333;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 100%;
-  max-width: 1500px;
+
+
+
+
   /* border: 2px solid red; */
 
   h2{
@@ -64,8 +77,9 @@ background-color: #333;
   .logo {
     height: 90px;
     width:90px;
-
     display: flex;
+    margin: 5px;
+
   }
   img.logo {
 
@@ -87,6 +101,8 @@ background-color: #333;
     margin-right: auto;
     text-align: center;
     transition: all .5s ease;
+
+    
     a{
       color: white;
       font-size:2rem;
@@ -117,6 +133,9 @@ background-color: #333;
     left: 0;
     right: 0;
     text-align: center;
+    z-index: 2;
+
+
     a{
       font-size: 2rem;
       margin-top: 1rem;
@@ -137,16 +156,17 @@ position: absolute;
 background-color: #222;
 top: -700;
 left: -1000;
-z-index: -2;
+z-index: 0;
 transition: all .6s ease ;
 
 
 &.active{
   border-radius: 0 0 60% 0;
-  top: 0;
+  top: 100px;
   left: 0;
   width: 100%;
   height: 100%;
+
   
 }
 
