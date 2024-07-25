@@ -51,7 +51,7 @@ const NavHero = styled.nav`
   flex-direction:column;
   width: 100%;
   max-width: 1500px;
-  background-image: url('./fondoopaco.png');
+  background-image: url('./fondo3.png');
   background-repeat: no-repeat;
   background-size:100% 100%;
 
@@ -134,7 +134,7 @@ const NavContainer = styled.nav`
     position: absolute;
     margin-left: auto;
     margin-right: auto;
-    top: 20%;
+    top: 15%;
     left: 0;
     right: 0;
     text-align: center;
@@ -170,7 +170,7 @@ transition: all .6s ease ;
   top: 100px;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 80%;
 
   
 }
