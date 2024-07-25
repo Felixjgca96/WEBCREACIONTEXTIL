@@ -51,7 +51,7 @@ const NavHero = styled.nav`
   flex-direction:column;
   width: 100%;
   max-width: 1500px;
-  background-color: green;
+
 
 
 
