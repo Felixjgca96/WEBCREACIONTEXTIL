@@ -14,11 +14,9 @@ function Hero ( ) {
         </div>
         <ButtonContactanos>
             <a href="https://api.whatsapp.com/send?phone=584248098877" class="hero__boton" target="_blank">
-	            <i>Contáctanos</i>
+	            Contáctanos
 	        </a>
         </ButtonContactanos>
-
-
       </div>
     </HeroSection>
   )  
@@ -80,27 +78,26 @@ margin-top: 70px;
 `
 
 const ButtonContactanos = styled.div`
-
   .hero__boton {
-    padding: 10px 28px; 
-    outline: none;
-  border: none;
-  border-radius: 5px;
-  background-image: linear-gradient(to right, #6c757d, #adb5bd);  color: white;
-  font-weight: 600;
-  font-size: 15px;
-  cursor: pointer;
-  border: none;  
-  display: inline-block;
-  margin: 10px;
+    padding: 10px 20px; 
+
+    border-radius: 5px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    cursor: pointer;
+    margin: 10px;
+    color: white;
+    background-color: #222;
 
   }
 
   .hero__boton:hover {
-    background-image: linear-gradient(to right, #2e2f30, #838485);
-  
+    background-color: white;
+    transition: background-color 0.3s;
+    color: black;  
   }
 
 `
+
 
 
