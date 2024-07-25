@@ -11,9 +11,7 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  background-image: url('./fondo.png');
-  background-repeat: no-repeat;
-  background-size:100%;
+
 
 
 
@@ -31,6 +29,9 @@ a:hover {
  body {
   /* border: 2px solid blue; */
   margin: 0;
+  background-image: url('./fondo8.jpg');
+  background-repeat: no-repeat;
+  background-size:100%;
 
 
 
