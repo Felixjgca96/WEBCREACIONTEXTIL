@@ -1,10 +1,13 @@
-import { useState } from 'react'
+import React from "react";
+
 
 import './App.css'
 import Navbar from './components/Navbar'
 import ButtonWa from './components/ButtonWa'
 import Hero from './components/Hero'
 import Services from './components/Services'
+import Products from './components/Productos/Products';
+
 
 function App() {
 
@@ -13,6 +16,9 @@ function App() {
       <Navbar/>
         <Hero/>
         <Services/>
+        <Products/>
+
+
         <Hero/>
         <Hero/>
         <Hero/>

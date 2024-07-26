@@ -92,7 +92,7 @@ const NavContainer = styled.nav`
   }
   img.logo {
 
-    margin-left:0.5rem;
+    margin-left:1rem;
 
   }
 
