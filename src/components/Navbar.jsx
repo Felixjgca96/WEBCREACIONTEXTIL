@@ -50,7 +50,7 @@ const NavHero = styled.nav`
   flex-direction:column;
   width: 100%;
   max-width: 1500px;
-  z-index: 0;
+  z-index: 1000;
 
 
 

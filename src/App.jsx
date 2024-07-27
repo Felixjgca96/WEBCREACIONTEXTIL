@@ -7,6 +7,7 @@ import ButtonWa from './components/ButtonWa'
 import Hero from './components/Hero'
 import Services from './components/Services'
 import Products from './components/Productos/Products';
+import Prueba from "./components/Prueba";
 
 
 function App() {
@@ -16,7 +17,7 @@ function App() {
       <Navbar/>
         <Hero/>
         <Services/>
-        <Products/>
+        <Prueba/>
 
 
         <Hero/>
