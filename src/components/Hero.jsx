@@ -1,83 +1,76 @@
-import React from 'react';
-import styled from 'styled-components'
 
+import React, { useState, useEffect } from 'react';
+import styled from 'styled-components';
+function Prueba() {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const heroes = [
+    {
+      imagen: './hero1.jpg',
+      titulo: 'Bordados con calidad',
+      descripcion: 'Trabajo responsable y rápido. ',
+    },
+    {
+      imagen: './hero2.jpg',
+      titulo: 'Atención personalizada',
+      descripcion: 'Excelente atención y buena presencia.',
+    },
+    {
+        imagen: './hero3.jpg',
+        titulo: 'Detalles perfectos',
+        descripcion: 'Buena capacidad de finalizacion en cada detalle.',
+    },
+  ];
 
-function Hero ( ) {
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      setCurrentIndex((currentIndex + 1) % heroes.length);
+    }, 3000);
+    return () => clearInterval(intervalId);
+  }, [currentIndex, heroes.length]); // Agregué currentIndex como dependencia
+
   return (
-    <HeroSection>
-      <div class="hero__contenido">
-        <h1 class="hero__titulo">Tu centro de confianza</h1>
-        <div class="hero__descripcion">
-          <p class="hero__descripcion__puno">Trabajo responsable y rápido, con buena capacidad de finalizacion en cada detalle.
-          </p>
-        <p class="hero__descripcion__pdos">Excelente atención y buena presencia.</p>
-        </div>
-        <ButtonContactanos>
+    <PruebaHero>
+      <div className="hero-image" style={{ backgroundImage: `url(${heroes[currentIndex].imagen})` }}>
+        <div className="hero-content">
+          <h1>{heroes[currentIndex].titulo}</h1>
+          <p>{heroes[currentIndex].descripcion}</p>
+          <ButtonContactanos>
             <a href="https://api.whatsapp.com/send?phone=584248098877" class="hero__boton" target="_blank">
 	            Contáctanos
 	        </a>
-        </ButtonContactanos>
+          </ButtonContactanos>
+        </div>
       </div>
-    </HeroSection>
-  )  
-}
-export default Hero
+    </PruebaHero>
+  );
+};
 
+export default Prueba;
 
-
-const HeroSection = styled.section`
-display: flex;
-justify-content: center;
-align-items: center;
-text-align: center;
-color: #fff;
-height: 500px;
-margin-top: 70px;
-
-
-  .hero__contenido {
-    display: flex;
-    flex-direction:column;
-    justify-content: center;
-    text-align: center;
-    
-  }
-
-  .hero__titulo {
-    font-size: 48px;
-    font-weight: bold;
-    margin: 0;
-    margin-bottom: 20px;
-    text-align: center;
-  }
-
-  .hero__descripcion {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    margin-bottom: 20px;
-    gap: 15px;
-    font-weight: bold;
-
-  }
-  .hero__descripcion__puno {
-    font-size: 26px;
+const PruebaHero = styled.div`
+  height: 500px;
+  width: 95%;
+  max-width: 1500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top:110px ;
+  .hero-image {
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
     display: flex;
     justify-content: center;
-    text-align: center;
-    margin: 0;
-
+    align-items: center;
+    border-radius: 20px;
   }
-  .hero__descripcion__pdos {
-    font-size: 20px;
-    display: flex;
-    justify-content: center;
+  .hero-content {
+    color: #fff;
     text-align: center;
-    margin: 0;
-
   }
-`
+`;
+
 
 const ButtonContactanos = styled.div`
   .hero__boton {
@@ -90,16 +83,14 @@ const ButtonContactanos = styled.div`
     margin: 10px;
     color: white;
     background-color: #222;
+    opacity: 80%;
 
   }
 
   .hero__boton:hover {
-    background-color: white;
+    background-color: black;
     transition: background-color 0.3s;
-    color: black;  
+    opacity: 100%;
   }
 
 `
-
-
-
