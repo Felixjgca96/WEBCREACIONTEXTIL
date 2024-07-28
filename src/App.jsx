@@ -16,7 +16,12 @@ function App() {
       <Services/>
       <CarruselProductos/>
       <ButtonWa/>
-      
+      <Hero/>
+
+      <Hero/>
+      <Hero/>
+      <Hero/>
+
     </>
   )
 }

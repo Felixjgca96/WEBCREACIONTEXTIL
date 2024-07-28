@@ -3,7 +3,9 @@ import styled from 'styled-components';
 
 const Carrusel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const productos = [
+  const [isNextDisabled, setIsNextDisabled] = useState(false);
+  const [isPrevDisabled, setIsPrevDisabled] = useState(true);
+    const productos = [
     { id: 1, titulo: "Conjunto Deportivo", categoria: "hombre", imagen: "./conjuntodeportivo.png", },
     { id: 2, titulo: "Franelillas", categoria: "hombre", imagen: "./franelilla.png", },
     { id: 3, titulo: "Franela 100% Algodon", categoria: "hombre", imagen: "./franela100.png", },
@@ -32,16 +34,29 @@ const Carrusel = () => {
   
 
   const handleNext = () => {
-    setCurrentIndex((currentIndex + 1) % productos.length);
+    if (currentIndex < productos.length - 1) {
+      setCurrentIndex(currentIndex + 1);
+      setIsPrevDisabled(false);
+      if (currentIndex === productos.length - 2) {
+        setIsNextDisabled(true);
+      }
+    }
   };
-
+  
   const handlePrev = () => {
-    setCurrentIndex((currentIndex - 1 + productos.length) % productos.length);
+    if (currentIndex > 0) {
+      setCurrentIndex(currentIndex - 1);
+      setIsNextDisabled(false);
+      if (currentIndex === 1) {
+        setIsPrevDisabled(true);
+      }
+    }
   };
+  
 
   return (
     <CarruselContainer>
-      <Boton onClick={handlePrev}>Prev</Boton>
+      <BotonPrev onClick={handlePrev} disabled={isPrevDisabled}>{'<'}</BotonPrev>
       <CarruselWrapper>
         {productos.slice(currentIndex, currentIndex + 4).map((producto) => (
           <CarruselItem key={producto.id}>
@@ -50,8 +65,7 @@ const Carrusel = () => {
           </CarruselItem>
         ))}
       </CarruselWrapper> 
-      <Boton onClick={handleNext}>Next</Boton>
-
+      <BotonNext onClick={handleNext} disabled={isNextDisabled}>{'>'}</BotonNext>
     </CarruselContainer>
   );
 };
@@ -67,7 +81,7 @@ const CarruselContainer = styled.div`
   justify-content: center;
   z-index: 0;
   max-width: 1300px;
-  border: 2px solid yellow;
+  /* border: 2px solid yellow; */
 
 `;
 
@@ -86,17 +100,11 @@ const CarruselWrapper = styled.div`
   height: 304px;
   padding: 10px 0px;
   margin: 0px auto;
-  max-width: 1300px;
+  max-width: 90%;
   overflow: hidden;
-  border: 2px solid green;
+  /* border: 2px solid green; */
   gap: 10px;
   transition: transform 0.5s ease-in-out;
-
-
-  
-
-  
-
 `;
 
 const CarruselItem = styled.div`
@@ -111,13 +119,15 @@ const CarruselItem = styled.div`
   background-position: top center;
   border-radius: 15px;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 102);
-  border: 2px solid blue;
+  /* border: 2px solid blue; */
   width: 270px;
-  height: 270px;
+  height: 270px; 
+  margin-left: 2px;
+  margin-right: 2px;
 
 
 
-
+  
 `;
 
 const Imagen = styled.img`
@@ -126,7 +136,7 @@ const Imagen = styled.img`
   object-fit: cover;
   padding: 0px;
   margin: 0px;
-  border: 2px solid purple;
+  /* border: 2px solid purple; */
 
 `;
 
@@ -136,7 +146,7 @@ const Titulo = styled.h2`
   padding: 0px;
   margin: 0px;
   text-align: center;
-  border: 2px solid red;
+  /* border: 2px solid red; */
 
 `;
 
@@ -151,24 +161,69 @@ const Botones = styled.div`
   padding: 10px;
 `;
 
-const Boton = styled.button`
-  background-color: #222;
-  border: none;
+const BotonPrev = styled.button`
+  background-color: white;
+  font-size:30px;
+  font-weight: 700;  border: none;
   cursor: pointer;
-  width: 80px;
-  height: 30px;
-  border-radius: 15px;
-  color: white;
+  width: 35px;
+  height: 35px;
+  border-radius: 20px;
+  color: black;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
-  border: 2px solid red;
+  /* border: 2px solid red; */
+  position: absolute;
+  z-index: 2;
+  left:0px; 
+  padding:auto;
 
-  :after {
-    color: #222;
+  &:hover {
+    color: white;
+    background-color: black;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+    color: black;
     background-color: white;
   }
+
 `;
 
+const BotonNext = styled.button`
+  background-color: white;
+  font-size:30px;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  width: 35px;
+  height: 35px;
+  border-radius: 20px;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  /* border: 2px solid red; */
+  position: absolute;
+  right:0px; 
+  
+  
+  &:hover {
+    color: white;
+    background-color: black;
+  }
 
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+    color: black;
+    background-color: white;
+  }
+
+
+`;
