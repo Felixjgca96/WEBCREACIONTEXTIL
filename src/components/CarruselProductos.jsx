@@ -41,7 +41,7 @@ const Carrusel = () => {
 
   return (
     <CarruselContainer>
-      <Boton onClick={handlePrev}>Atrás</Boton>
+      <Boton onClick={handlePrev}>Prev</Boton>
       <CarruselWrapper>
         {productos.slice(currentIndex, currentIndex + 4).map((producto) => (
           <CarruselItem key={producto.id}>
@@ -50,7 +50,7 @@ const Carrusel = () => {
           </CarruselItem>
         ))}
       </CarruselWrapper> 
-      <Boton onClick={handleNext}>Siguiente</Boton>
+      <Boton onClick={handleNext}>Next</Boton>
 
     </CarruselContainer>
   );
@@ -72,15 +72,27 @@ const CarruselContainer = styled.div`
 `;
 
 const CarruselWrapper = styled.div`
+  /* display: flex;
+  *justify-content: center;
+  *align-items: center;
+  *width: 99%;
+  *max-width: 1300px;
+  *overflow: hidden; */
+
+  position: relative;
   display: flex;
-  justify-content: center;
   align-items: center;
-  transition: transform 0.5s ease-in-out;
-  gap: 10px;
-  width: 99%;
+  width: fit-content;
+  height: 304px;
+  padding: 10px 0px;
+  margin: 0px auto;
   max-width: 1300px;
-  border: 2px solid green;
   overflow: hidden;
+  border: 2px solid green;
+  gap: 10px;
+  transition: transform 0.5s ease-in-out;
+
+
   
 
   

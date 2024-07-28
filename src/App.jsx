@@ -1,13 +1,10 @@
 import React from "react";
-
-
 import './App.css'
 import Navbar from './components/Navbar'
 import ButtonWa from './components/ButtonWa'
 import Hero from './components/Hero'
 import Services from './components/Services'
-import Products from './components/Productos/Products';
-import Prueba from "./components/Prueba";
+import CarruselProductos from "./components/CarruselProductos";
 
 
 function App() {
@@ -15,14 +12,9 @@ function App() {
   return (
     <>
       <Navbar/>
-        <Hero/>
-        <Services/>
-        <Prueba/>
-
-
-        <Hero/>
-        <Hero/>
-        <Hero/>
+      <Hero/>
+      <Services/>
+      <CarruselProductos/>
       <ButtonWa/>
       
     </>
