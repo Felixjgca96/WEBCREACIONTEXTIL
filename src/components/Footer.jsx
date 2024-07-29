@@ -9,23 +9,23 @@ function Footer() {
           <a href="#" className="Nombre">Creación Textil</a>
           <ul className="media-icons">
             <li>
-              <a href="#">
-                <i className="fa-brands fa-youtube" />
+              <a href="https://api.whatsapp.com/send?phone=584248098877" target="_blank">
+                <i className="fa-brands fa-whatsapp" />
               </a>
             </li>
             <li>
-              <a href="#">
-                <i className="fa-brands fa-discord" />
+              <a href="https://www.tiktok.com/es/" target="_blank">
+                <i className="fa-brands fa-tiktok" />
               </a>
             </li>
             <li>
-              <a href="#">
+              <a href="https://www.instagram.com/" target="_blank">
                 <i className="fa-brands fa-instagram" />
               </a>
             </li>
             <li>
-              <a href="#">
-                <i className="fa-brands fa-github" />
+              <a href="https://www.facebook.com/" target="_blank">
+                <i className="fa-brands fa-facebook" />
               </a>
             </li>
           </ul>
@@ -61,7 +61,7 @@ function Footer() {
             </li>
             <li>
               <a href="#">
-                <i className="fa-brands fa-cc-apple-pay" />
+                <i className="fa-brands fa-dollar-sign" />
               </a>
             </li>
             <li>
@@ -71,9 +71,11 @@ function Footer() {
             </li>
             <li>
               <a href="#">
-                <i className="fa-brands fa-cc-amazon-pay" />
+                <i className="fa-brands fa-cc-visa" />
               </a>
             </li>
+            
+
           </ul>
         </div>
       </div>
