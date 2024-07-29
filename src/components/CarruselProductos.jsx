@@ -133,11 +133,8 @@ const CarruselItem = styled.div`
 const Imagen = styled.img`
   width: 220px;
   height: 220px;
-  object-fit: cover;
-  padding: 0px;
-  margin: 0px;
-  /* border: 2px solid purple; */
 
+   /* border: 2px solid purple; */
 `;
 
 const Titulo = styled.h2`

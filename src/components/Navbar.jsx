@@ -64,7 +64,7 @@ const NavContainer = styled.nav`
   max-width: 1500px;
   position: fixed; 
   top: 0;
-  background: #222;
+  background: #121315;
  
 
   

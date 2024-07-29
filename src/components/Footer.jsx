@@ -6,7 +6,7 @@ function Footer() {
     <FooterSection>
       <div className="container">
         <div className="col1">
-          <a href="#" className="brand">Brand</a>
+          <a href="#" className="Nombre">Creación Textil</a>
           <ul className="media-icons">
             <li>
               <a href="#">
@@ -33,35 +33,26 @@ function Footer() {
         <div className="col2">
           <ul className="menu">
             <li>
-              <a href="#">Home</a>
+              <a href="#">Inicio</a>
             </li>
             <li>
-              <a href="#">About</a>
+              <a href="#">Productos</a>
             </li>
             <li>
-              <a href="#">Portfolio</a>
+              <a href="#">Servicios</a>
             </li>
+
             <li>
-              <a href="#">Skills</a>
+              <a href="#">Contacto</a>
             </li>
-            <li>
-              <a href="#">Contact</a>
-            </li>
-            <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem excepturi ipsam unde obcaecati iusto velit labore consequuntur officiis aut neque?
-            </p>
+            
           </ul>
+          <p>
+            Empresa especializada en personalización de textiles y muebles mediante bordado, estampado, sublimación y tapizado. Su equipo de expertos ofrece soluciones personalizadas y únicas.
+            </p>
         </div>
         <div className="col3">
-          <p>Subscribe to our newslatter</p>
-          <form>
-            <div className="input-wrap">
-              <input type="email" placeholder="ex@gmail.com" />
-              <button type="submit">
-                <i className="fa-solid fa-paper-plane" />
-              </button>
-            </div>
-          </form>
+
           <ul className="services-icons">
             <li>
               <a href="#">
@@ -88,7 +79,7 @@ function Footer() {
       </div>
       <div className="footer-bottom">
         <div className="mekk">
-          <p>@ndriWebDev 2023 - All Rights Reserved</p>
+          <p>Creación Textil 2010 - Todos los derechos reservados.</p>
         </div>
       </div>
     </FooterSection>
@@ -100,7 +91,7 @@ export default Footer;
 const FooterSection = styled.div`
   
   box-sizing: border-box;
-  margin: 0;
+  margin: 20px 0 0 0;
   padding: 0;
   color: #fff;
   background: #121315;
@@ -108,19 +99,21 @@ const FooterSection = styled.div`
 
 ul {
   list-style: none;
+
 }
 p {
   color: #fff;
   max-width: 25em;
   font-size: 0.9em;
   line-height: 23px;
+  text-align: justify;
 }
 a {
   color: #fff;
   text-decoration: none;
 }
 .container {
-  max-width: 1200px;
+  max-width: 1500px;
   margin: 0 auto;
   padding: 2em;
 }
@@ -131,18 +124,26 @@ a {
 
   @media(max-width: 900px) {
     flex-direction: column;
+    
 }
 }
-.brand {
+.Nombre {
   display: block;
   font-size: 1.8em;
   font-weight: 600;
   margin-bottom: 1em;
 }
+.media-icons, 
+.services-icons {
+    margin: 0;
+    padding: 0;
+}
 .media-icons li,
 .services-icons li {
   display: inline-block;
   margin: 0.5em 0.5em 0.5em 0;
+
+
 }
 .media-icons a {
   font-size: 1.1em;
@@ -154,6 +155,7 @@ a {
   justify-content: center;
   align-items: center;
   transition: 0.3s;
+
 }
 .media-icons a:hover {
   background: #fff;
@@ -171,47 +173,34 @@ a {
   border-top: 1px solid rgba(138, 208, 153, 0.36);
   padding: 2em;
 }
+.col2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    @media(max-width: 900px) {
+    align-items: flex-end;
+}
+}
 .menu {
-  margin-bottom: 1em;
-}
-.menu li {
-  display: inline-block;
-  margin: 0 0.7em 0.7em 0;
+  display: flex;
   text-align: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 1em;
+  gap: 10px;
+
 }
-.menu a {
+
+.menu li a {
   transition: 0.3s;
   font-weight: 600;
 }
 .menu a:hover {
   color: #94fbab;
 }
-.input-wrap {
-  margin: 1em 0;
-  display: flex;
-}
-.input-wrap input {
-  padding: 0.5em;
-  border: none;
-  background: #20232a;
-  color: #ccc;
-}
-.input-wrap input:focus {
-  outline: none;
-}
-.input-wrap button {
-  padding: 0.8em;
-  background: #94fbab;
-  border: none;
-  color: #217634;
-  transition: 0.3s;
-}
-.input-wrap button:hover {
-  background: #fff;
-  color: #111;
-}
-/* == responsive == */
 
 
-  
+
 `

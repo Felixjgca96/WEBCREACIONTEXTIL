@@ -40,6 +40,9 @@ const ServicesSection = styled.div`
   display: flex;
   justify-content: center;
   padding: 50px 0;
+  margin-bottom:0px;
+padding-bottom: 0px;
+
 }
 
 .services__cards {
@@ -59,7 +62,7 @@ const ServicesSection = styled.div`
   font-size: 2rem;
   font-weight: 900;
   color: white;
-  margin-bottom: 1rem;
+  margin-bottom: 0rem;
   @media(max-width: 768px){
     font-size: 1.7rem;
   }
@@ -69,7 +72,7 @@ const ServicesSection = styled.div`
 .services__cards-info p {
   font-size: 1.2rem;
   color: white;
-  margin-bottom: 1rem;
+  margin-bottom: 0;
   font-weight: bold;
   @media(max-width: 768px){
     font-size: 1rem;
@@ -89,7 +92,7 @@ const ServicesSection = styled.div`
   max-width: 25%;
   border: 1px solid white;
   margin: 3rem 1rem;
-  padding: 2rem 1rem;
+  padding: 1rem 1rem;
   border-radius: 5px;
   transition: background-color 0.3s;
 }
@@ -101,19 +104,22 @@ const ServicesSection = styled.div`
 .service__card i {
   font-size: 56px;
   color: white;
-
 }
+
 
 .service__card h3 {
   font-size: 1.5rem;
   font-weight: 700;
   color: white;
+  margin: 0px 0px 10px 0px;
+  padding:0px;
 }
 
 .service__card p {
   font-size: 1.1rem;
   color: white;
-  margin-top: 1rem;
+  margin: 0px;
+  padding:0px;
 
 }
 
