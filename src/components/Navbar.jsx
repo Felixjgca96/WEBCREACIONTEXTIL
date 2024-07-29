@@ -197,20 +197,18 @@ const NavContainer = styled.nav`
 
 const BgDiv = styled.div`
 position: absolute;
-background-color: #222;
+background-color: #121315;
 top: -700;
 left: -1000;
 z-index: 0;
 transition: all .6s ease ;
-border: 2px solid gray;
-opacity: 99%;
 
 
 &.active{
-  border-radius: 0 0 60% 0;
+  border-radius: 0 0 50% 50%;
   top: 100px;
   left: 0;
-  width: 99%;
+  width: 100%;
   height: 450px;
 
   
