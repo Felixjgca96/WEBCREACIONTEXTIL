@@ -32,9 +32,7 @@ function Footer() {
         </div>
         <div className="col2">
           <ul className="menu">
-            <li>
-              <a href="#">Inicio</a>
-            </li>
+
             <li>
               <a href="#">Productos</a>
             </li>
