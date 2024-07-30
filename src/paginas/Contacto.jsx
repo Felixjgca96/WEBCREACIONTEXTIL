@@ -115,8 +115,6 @@ const Formulario = styled.div`
     padding-left: 5px;
     padding-right: 5px;
     background-color: #121315;
-
-
   }
   textarea {
     width: 270px;
@@ -125,6 +123,8 @@ const Formulario = styled.div`
     border-radius: 5px;
     font-size: 16px;
     padding:5px;
+    background-color: #121315;
+
 
   }
   button {
