@@ -6,10 +6,12 @@ function ContactForm() {
   const [state, handleSubmit] = useForm("xkgwroll");
   if (state.succeeded) {
     return (
-      <p>Gracias por contactarnos! 
-        <button onClick={() => window.location.reload()}>Enviar otro mensaje</button>
-      </p>
-    );
+        <Agradecimiento>
+            <p>Gracias por contactarnos! 
+            </p>   
+            <button onClick={() => window.location.reload()}>Enviar otro mensaje</button>
+        </Agradecimiento>
+      );
   }
   return (
     <Formulario>
@@ -150,5 +152,38 @@ const Formulario = styled.div`
 
         margin-top: 5px;
     }
+  }
+`
+const Agradecimiento = styled.div`
+display: flex;
+justify-content: center;
+text-align: center;
+align-items: center;
+gap: 10px;
+@media(max-width: 750px) {
+
+flex-direction: column;
+}
+
+  p {
+    font-size: 22px;
+  }
+
+  button {
+    width: 230px;
+    height: 40px;
+    background-color: #4CAF50;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 600;
+
+    &:hover 
+    {background-color: #fff;
+    transition: background-color 0.3s;
+    color:  #4CAF50; }
+
+
   }
 `
