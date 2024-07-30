@@ -6,7 +6,7 @@ import Hero from './components/Hero'
 import Services from './components/Services'
 import CarruselProductos from "./components/CarruselProductos";
 import Footer from "./components/Footer"
-
+import Contacto from "../src/paginas/Contacto"
 function App() {
 
   return (
@@ -16,6 +16,7 @@ function App() {
       <Services/>
       <CarruselProductos/>
       <ButtonWa/>
+      <Contacto/>
       <Footer/>
 
 

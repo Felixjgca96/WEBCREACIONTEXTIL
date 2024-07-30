@@ -182,7 +182,7 @@ a {
     align-items: center;
     @media(max-width: 900px) {
     align-items: flex-end;
-}
+  }
 }
 .menu {
   display: flex;
@@ -198,6 +198,10 @@ a {
 .menu li a {
   transition: 0.3s;
   font-weight: 600;
+  @media(max-width: 450px) {
+        font-weight: 600;
+        font-size: 13px;
+    }
 }
 .menu a:hover {
   color: #94fbab;
