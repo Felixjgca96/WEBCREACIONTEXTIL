@@ -17,8 +17,6 @@ const QuienesSomos = () => {
         <p>Calidad, Innovación, Diseño, Servicio al cliente</p>
         <img src="valores.avif" alt="Valores" />
       </Valores>
-
-
       <Servicios>
         <h3>Servicios</h3>
         <p>Bordado, Estampado, Tapizado, Sublimación</p>
@@ -68,13 +66,7 @@ const Container = styled.div`
   }
 
   }
-  h2 {
-    grid-column: 1 / 3;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-  }
+
 
   h3, p {
     margin: 0;
