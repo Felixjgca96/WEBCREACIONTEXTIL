@@ -1,216 +1,4 @@
-// // // import React, { useState } from 'react';
-// // // import styled from 'styled-components';
 
-// // // const Productos = () => {
-// // //   const [currentIndex, setCurrentIndex] = useState(0);
-// // //   const [isNextDisabled, setIsNextDisabled] = useState(false);
-// // //   const [isPrevDisabled, setIsPrevDisabled] = useState(true);
-// // //     const productos = [
-// // //     { id: 1, titulo: "Conjunto Deportivo", categoria: "hombre", imagen: "./conjuntodeportivo.png", },
-// // //     { id: 2, titulo: "Franelillas", categoria: "hombre", imagen: "./franelilla.png", },
-// // //     { id: 3, titulo: "Franela 100% Algodon", categoria: "hombre", imagen: "./franela100.png", },
-// // //     { id: 4, titulo: "Camisa Poliester", categoria: "hombre", imagen: "./camisapoliester.png", },
-// // //     { id: 5, titulo: "Calza Dama", categoria: "dama", imagen: "./calzadama.png", },
-// // //     { id: 6, titulo: "Remera Dama", categoria: "dama", imagen: "./remeradama.png", },
-// // //     { id: 7, titulo: "Top Dama", categoria: "dama", imagen: "./topdama.png", },
-// // //     { id: 8, titulo: "Campera Dama", categoria: "dama", imagen: "./camperadama.png", },
-// // //     { id: 9, titulo: "Campera Niño", categoria: "niño", imagen: "./camperaniño.png", },
-// // //     { id: 10, titulo: "Jogger Dama", categoria: "dama", imagen: "./joggerdama.png", },
-// // //     { id: 11, titulo: "Mochila Dama", categoria: "dama", imagen: "./mochiladama.png", },
-// // //     { id: 12, titulo: "Chaqueta Impermeable", categoria: "hombre", imagen: "./chaquetaimpermeable.png", },
-// // //     { id: 13, titulo: "Uniforme Deportivo", categoria: "hombre", imagen: "./uniformedeportivo.png", },
-// // //     { id: 14, titulo: "Jogger Caballero", categoria: "hombre", imagen: "./jogger.png", },
-// // //     { id: 15, titulo: "Mochila Niño", categoria: "niño", imagen: "./mochilaniño.png", },
-// // //     { id: 16, titulo: "Buzo Niño", categoria: "niño", imagen: "./buzoniño.png", },
-// // //     { id: 17, titulo: "Jogger Niño", categoria: "niño", imagen: "./joggerniño.png", },
-// // //     { id: 18, titulo: "Musculosa Niño", categoria: "niño", imagen: "./musculosaniño.png", },
-// // //     { id: 19, titulo: "Gorra Niño", categoria: "niño", imagen: "./gorraniño.png", },
-// // //     { id: 20, titulo: "Remeron Dama", categoria: "dama", imagen: "./remerondama.png", },
-// // //     { id: 21, titulo: "Buzo Dama", categoria: "dama", imagen: "./buzodama.png", },
-// // //     { id: 22, titulo: "Lenceria Dama", categoria: "dama", imagen: "./lenceriadama.png", },
-// // //     { id: 23, titulo: "Musculosa Dama", categoria: "dama", imagen: "./musculosadama.png", },
-// // //     { id: 24, titulo: "Boxers", categoria: "hombre", imagen: "./ropainteriorhombre.png", },
-// // //   ];
-  
-
-// // //   const handleNext = () => {
-// // //     if (currentIndex < productos.length - 1) {
-// // //       setCurrentIndex(currentIndex + 4);
-// // //       setIsPrevDisabled(false);
-// // //       if (currentIndex === productos.length - 2) {
-// // //         setIsNextDisabled(true);
-// // //       }
-      
-// // //     }
-// // //   };
-  
-// // //   const handlePrev = () => {
-// // //     if (currentIndex > 0) {
-// // //       setCurrentIndex(currentIndex - 1);
-// // //       setIsNextDisabled(false);
-// // //       if (currentIndex === 1) {
-// // //         setIsPrevDisabled(true);
-// // //       }
-// // //     }
-// // //   };
-  
-
-// // //   return (
-// // //     <ProductoContainer>
-// // //       <h2>Productos</h2>
-// // //       <ProductoWrapper>
-// // //         {productos.slice(currentIndex, currentIndex + 4).map((producto) => (
-// // //           <ProductoItem key={producto.id}>
-// // //             <Imagen src={producto.imagen} alt={producto.titulo} />
-// // //             <Titulo>{producto.titulo}</Titulo>
-// // //           </ProductoItem>
-// // //         ))}
-// // //       </ProductoWrapper> 
-// // //       <Botones>
-// // //       <BotonPrev onClick={handlePrev} disabled={isPrevDisabled}>{'<Menos'}</BotonPrev>
-// // //       <BotonNext onClick={handleNext} disabled={isNextDisabled}>{'Mas>'}</BotonNext>
-// // //       </Botones>
-// // //     </ProductoContainer>
-// // //   );
-// // // };
-// // // export default Productos;
-
-
-
-// // import React, { useState } from 'react';
-// // import styled from 'styled-components';
-
-// // const Productos = () => {
-// //   const [currentIndex, setCurrentIndex] = useState(0);
-// //   const [isNextDisabled, setIsNextDisabled] = useState(false);
-// //   const [isPrevDisabled, setIsPrevDisabled] = useState(true);
-
-// //   const productos = [
-// //     { id: 1, titulo: "Conjunto Deportivo", categoria: "hombre", imagen: "./conjuntodeportivo.png", },
-// //     { id: 2, titulo: "Franelillas", categoria: "hombre", imagen: "./franelilla.png", },
-// //     { id: 3, titulo: "Franela 100% Algodon", categoria: "hombre", imagen: "./franela100.png", },
-// //     { id: 4, titulo: "Camisa Poliester", categoria: "hombre", imagen: "./camisapoliester.png", },
-// //     { id: 5, titulo: "Calza Dama", categoria: "dama", imagen: "./calzadama.png", },
-// //     { id: 6, titulo: "Remera Dama", categoria: "dama", imagen: "./remeradama.png", },
-// //     { id: 7, titulo: "Top Dama", categoria: "dama", imagen: "./topdama.png", },
-// //     { id: 8, titulo: "Campera Dama", categoria: "dama", imagen: "./camperadama.png", },
-// //     { id: 9, titulo: "Campera Niño", categoria: "niño", imagen: "./camperaniño.png", },
-// //     { id: 10, titulo: "Jogger Dama", categoria: "dama", imagen: "./joggerdama.png", },
-// //     { id: 11, titulo: "Mochila Dama", categoria: "dama", imagen: "./mochiladama.png", },
-// //     { id: 12, titulo: "Chaqueta Impermeable", categoria: "hombre", imagen: "./chaquetaimpermeable.png", },
-// //     { id: 13, titulo: "Uniforme Deportivo", categoria: "hombre", imagen: "./uniformedeportivo.png", },
-// //     { id: 14, titulo: "Jogger Caballero", categoria: "hombre", imagen: "./jogger.png", },
-// //     { id: 15, titulo: "Mochila Niño", categoria: "niño", imagen: "./mochilaniño.png", },
-// //     { id: 16, titulo: "Buzo Niño", categoria: "niño", imagen: "./buzoniño.png", },
-// //     { id: 17, titulo: "Jogger Niño", categoria: "niño", imagen: "./joggerniño.png", },
-// //     { id: 18, titulo: "Musculosa Niño", categoria: "niño", imagen: "./musculosaniño.png", },
-// //     { id: 19, titulo: "Gorra Niño", categoria: "niño", imagen: "./gorraniño.png", },
-// //     { id: 20, titulo: "Remeron Dama", categoria: "dama", imagen: "./remerondama.png", },
-// //     { id: 21, titulo: "Buzo Dama", categoria: "dama", imagen: "./buzodama.png", },
-// //     { id: 22, titulo: "Lenceria Dama", categoria: "dama", imagen: "./lenceriadama.png", },
-// //     { id: 23, titulo: "Musculosa Dama", categoria: "dama", imagen: "./musculosadama.png", },
-// //     { id: 24, titulo: "Boxers", categoria: "hombre", imagen: "./ropainteriorhombre.png", },
-// //   ];
-// //   const handleNext = () => {
-// //     if (currentIndex < productos.length - 4) {
-// //       setCurrentIndex(currentIndex + 4);
-// //       setIsPrevDisabled(false);
-// //       if (currentIndex >= productos.length - 8) {
-// //         setIsNextDisabled(true);
-// //       }
-// //     }
-// //   };
-
-// //   const handlePrev = () => {
-// //     if (currentIndex > 0) {
-// //       setCurrentIndex(currentIndex - 4);
-// //       setIsNextDisabled(false);
-// //       if (currentIndex === 4) {
-// //         setIsPrevDisabled(true);
-// //       }
-// //     }
-// //   };
-
-// //   return (
-// //     <ProductoContainer>
-// //       <h2>Productos</h2>
-// //       <ProductoWrapper>
-// //         {productos.slice(currentIndex, currentIndex + 4).map((producto) => (
-// //           <ProductoItem key={producto.id}>
-// //             <Imagen src={producto.imagen} alt={producto.titulo} />
-// //             <Titulo>{producto.titulo}</Titulo>
-// //           </ProductoItem>
-// //         ))}
-// //       </ProductoWrapper>
-// //       <Botones>
-// //         <BotonPrev onClick={handlePrev} disabled={isPrevDisabled}>
-// //           {'<Menos'}
-// //         </BotonPrev>
-// //         <BotonNext onClick={handleNext} disabled={isNextDisabled}>
-// //           {'Mas>'}
-// //         </BotonNext>
-// //       </Botones>
-// //     </ProductoContainer>
-// //   );
-// // };
-
-// // export default Productos;
-
-
-// import React, { useState } from 'react';
-// import styled from 'styled-components';
-
-// const Productos = () => {
-//   const [currentIndex, setCurrentIndex] = useState(0);
-//   const [isNextDisabled, setIsNextDisabled] = useState(false);
-//   const [isPrevDisabled, setIsPrevDisabled] = useState(true);
-
-
-
-//   const handleNext = () => {
-//     if (currentIndex < productos.length - 4) {
-//       setCurrentIndex(currentIndex + 4);
-//       setIsPrevDisabled(false);
-//       if (currentIndex >= productos.length - 8) {
-//         setIsNextDisabled(true);
-//       }
-//     }
-//   };
-
-//   const handlePrev = () => {
-//     if (currentIndex > 0) {
-//       setCurrentIndex(currentIndex - 4);
-//       setIsNextDisabled(false);
-//       if (currentIndex === 4) {
-//         setIsPrevDisabled(true);
-//       }
-//     }
-//   };
-
-//   return (
-//     <ProductoContainer>
-//       <h2>Productos</h2>
-//       <ProductoWrapper>
-//         {productos.slice(currentIndex, currentIndex + 4).map((producto) => (
-//           <ProductoItem key={producto.id}>
-//             <Imagen src={producto.imagen} alt={producto.titulo} />
-//             <Titulo>{producto.titulo}</Titulo>
-//           </ProductoItem>
-//         ))}
-//       </ProductoWrapper>
-//       <Botones>
-//         <BotonPrev onClick={handlePrev} disabled={isPrevDisabled}>
-//           {'<Menos'}
-//         </BotonPrev>
-//         <BotonNext onClick={handleNext} disabled={isNextDisabled}>
-//           {'Mas>'}
-//         </BotonNext>
-//       </Botones>
-//     </ProductoContainer>
-//   );
-// };
-
-// export default Productos;
 
 import React, { useState } from 'react';
 import styled from 'styled-components';
@@ -341,6 +129,26 @@ const ProductoItem = styled.div`
   height: 270px; 
   margin-left: 2px;
   margin-right: 2px;
+  @media (max-width: 650px) {
+    flex-direction: row;
+    width: 230px;
+    height: 150px;
+    justify-content: space-between;
+    padding-left: 5px;
+    padding-right: 5px
+  }
+
+  @media (max-width: 600px) {
+    width: 200px;
+    height: 150px;
+  }
+
+  @media (max-width: 510px) {
+    width: 280px;
+    height: 150px;
+  }
+
+
 
 
 
@@ -350,7 +158,19 @@ const ProductoItem = styled.div`
 const Imagen = styled.img`
   width: 220px;
   height: 220px;
+  @media (max-width: 650px) {
+    width: 130px;
+    height: 130px;
+  }
 
+  @media (max-width: 600px) {
+    width: 110px;
+    height: 110px;
+  }
+  @media (max-width: 510px) {
+    width: 130px;
+    height: 130px;
+  }
    /* border: 2px solid purple; */
 `;
 
@@ -361,6 +181,9 @@ const Titulo = styled.h2`
   margin: 0px;
   text-align: center;
   /* border: 2px solid red; */
+  @media (max-width: 650px) {
+    font-size:13px;
+  }
 
 `;
 
