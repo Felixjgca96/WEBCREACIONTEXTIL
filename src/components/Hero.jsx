@@ -1,7 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
-function Prueba() {
+function Hero() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const heroes = [
     {
@@ -45,7 +45,7 @@ function Prueba() {
   );
 };
 
-export default Prueba;
+export default Hero;
 
 const PruebaHero = styled.div`
   height: 500px;

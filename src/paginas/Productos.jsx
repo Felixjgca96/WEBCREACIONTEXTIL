@@ -1,85 +1,136 @@
-
-
 import React, { useState } from 'react';
 import styled from 'styled-components';
-
-const productos = [
-    { id: 1, titulo: "Conjunto Deportivo", categoria: "hombre", imagen: "./conjuntodeportivo.png", },
-    { id: 2, titulo: "Franelillas", categoria: "hombre", imagen: "./franelilla.png", },
-    { id: 3, titulo: "Franela 100% Algodon", categoria: "hombre", imagen: "./franela100.png", },
-    { id: 4, titulo: "Camisa Poliester", categoria: "hombre", imagen: "./camisapoliester.png", },
-    { id: 5, titulo: "Calza Dama", categoria: "dama", imagen: "./calzadama.png", },
-    { id: 6, titulo: "Remera Dama", categoria: "dama", imagen: "./remeradama.png", },
-    { id: 7, titulo: "Top Dama", categoria: "dama", imagen: "./topdama.png", },
-    { id: 8, titulo: "Campera Dama", categoria: "dama", imagen: "./camperadama.png", },
-    { id: 9, titulo: "Campera Niño", categoria: "niño", imagen: "./camperaniño.png", },
-    { id: 10, titulo: "Jogger Dama", categoria: "dama", imagen: "./joggerdama.png", },
-    { id: 11, titulo: "Mochila Dama", categoria: "dama", imagen: "./mochiladama.png", },
-    { id: 12, titulo: "Chaqueta Impermeable", categoria: "hombre", imagen: "./chaquetaimpermeable.png", },
-    { id: 13, titulo: "Uniforme Deportivo", categoria: "hombre", imagen: "./uniformedeportivo.png", },
-    { id: 14, titulo: "Jogger Caballero", categoria: "hombre", imagen: "./jogger.png", },
-    { id: 15, titulo: "Mochila Niño", categoria: "niño", imagen: "./mochilaniño.png", },
-    { id: 16, titulo: "Buzo Niño", categoria: "niño", imagen: "./buzoniño.png", },
-    { id: 17, titulo: "Jogger Niño", categoria: "niño", imagen: "./joggerniño.png", },
-    { id: 18, titulo: "Musculosa Niño", categoria: "niño", imagen: "./musculosaniño.png", },
-    { id: 19, titulo: "Gorra Niño", categoria: "niño", imagen: "./gorraniño.png", },
-    { id: 20, titulo: "Remeron Dama", categoria: "dama", imagen: "./remerondama.png", },
-    { id: 21, titulo: "Buzo Dama", categoria: "dama", imagen: "./buzodama.png", },
-    { id: 22, titulo: "Lenceria Dama", categoria: "dama", imagen: "./lenceriadama.png", },
-    { id: 23, titulo: "Musculosa Dama", categoria: "dama", imagen: "./musculosadama.png", },
-    { id: 24, titulo: "Boxers", categoria: "hombre", imagen: "./ropainteriorhombre.png", },
-  ];
+import { productos } from '../Arrays/ArrayProductos';
+import { Categorias } from '../Arrays/ArrayCategorias';
 
 const Productos = () => {
+
+
   const [productosMostrados, setProductosMostrados] = useState(productos.slice(0, 4));
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isNextDisabled, setIsNextDisabled] = useState(false);
   const [isPrevDisabled, setIsPrevDisabled] = useState(true);
+  const [categoriaSeleccionada, setCategoriaSeleccionada] = useState(""); // Agregué este estado
 
   const handleNext = () => {
-    const nuevosProductos = productos.slice(productosMostrados.length, productosMostrados.length + 4);
+    const productosFiltrados = productos.filter((producto) => producto.categoria === categoriaSeleccionada || categoriaSeleccionada === "");
+    const nuevosProductos = productosFiltrados.slice(productosMostrados.length, productosMostrados.length + 4);
     setProductosMostrados([...productosMostrados, ...nuevosProductos]);
     setCurrentIndex(currentIndex + 4);
     setIsPrevDisabled(false);
-    if (productosMostrados.length + 4 >= productos.length) {
+    if (productosMostrados.length + 4 >= productosFiltrados.length) {
       setIsNextDisabled(true);
     }
   };
-
+  
   const handlePrev = () => {
-    const nuevosProductos = productos.slice(Math.max(productosMostrados.length - 8, 0), productosMostrados.length - 4);
-    setProductosMostrados(nuevosProductos);
-    setCurrentIndex(currentIndex - 4);
-    setIsNextDisabled(false);
-    if (productosMostrados.length - 4 <= 0) {
+    if (productosMostrados.length > 4) {
+      const productosFiltrados = productos.filter((producto) => producto.categoria === categoriaSeleccionada || categoriaSeleccionada === "");
+      setProductosMostrados(productosFiltrados.slice(0, 4));
+      setCurrentIndex(0);
       setIsPrevDisabled(true);
+      setIsNextDisabled(false);
     }
+  };
+  
+
+  const handleCategoria = (categoria) => {
+    setCategoriaSeleccionada(categoria);
+    const productosFiltrados = productos.filter((producto) => producto.categoria === categoria || categoria === "");
+    setProductosMostrados(productosFiltrados.slice(0, 4));
+    setCurrentIndex(0);
+    setIsPrevDisabled(true);
+    setIsNextDisabled(false);
   };
 
   return (
     <ProductoContainer>
       <h2>Productos</h2>
+      <CategoriasProductos>
+        {Categorias.map((categoria) => (
+          <CategoriaItem key={categoria.id} onClick={() => handleCategoria(categoria.categoria)}>
+            <Imagen src={categoria.imagen} alt={categoria.titulo} />
+            <Titulo>{categoria.titulo}</Titulo>
+          </CategoriaItem>
+        ))}
+      </CategoriasProductos>
       <ProductoWrapper>
         {productosMostrados.map((producto) => (
           <ProductoItem key={producto.id}>
-            <Imagen src={producto.imagen} alt={producto.titulo} />
-            <Titulo>{producto.titulo}</Titulo>
+            <ImagenProductos src={producto.imagen} alt={producto.titulo} />
+            <TituloProductos>{producto.titulo}</TituloProductos>
           </ProductoItem>
         ))}
       </ProductoWrapper>
       <Botones>
-        <BotonPrev onClick={handlePrev} disabled={isPrevDisabled}>
-          {'<Ver Menos'}
-        </BotonPrev>
-        <BotonNext onClick={handleNext} disabled={isNextDisabled}>
-          {'Ver Mas>'}
-        </BotonNext>
+        <BotonPrev onClick={handlePrev} disabled={isPrevDisabled}> {'<Ver Menos'} </BotonPrev>
+        <BotonNext onClick={handleNext} disabled={isNextDisabled}> {'Ver Mas>'} </BotonNext>
       </Botones>
     </ProductoContainer>
   );
 };
 
 export default Productos;
+
+// Estilos
+const CategoriasProductos = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  @media (max-width: 450px) {
+    gap: 3px;
+    
+  }
+`;
+
+const CategoriaItem = styled.div`
+  cursor: pointer;
+  background-color: #121315;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  gap: 10px;
+  border:2px solid #ccc;
+  &:hover {
+    background-color: black;
+  }
+  @media (max-width: 600px) {
+    width: 70px;
+    height: 110px;
+    padding: 0;
+    flex-direction: column;
+    
+  }
+
+
+`;
+
+const Imagen = styled.img`
+  width: 50px;
+  height: 50px;
+  @media (max-width: 600px) {
+    margin: 0px;
+    
+  }
+
+`;
+
+const Titulo = styled.h3`
+  font-size: 16px;
+  margin-top: 10px;
+  text-align: center;
+
+
+  @media (max-width: 600px) {
+    margin: 0px;
+    
+  }
+`;
+
 const ProductoContainer = styled.div`
   width: 99%;
   display: flex;
@@ -148,14 +199,9 @@ const ProductoItem = styled.div`
     height: 150px;
   }
 
-
-
-
-
-  
 `;
 
-const Imagen = styled.img`
+const ImagenProductos = styled.img`
   width: 220px;
   height: 220px;
   @media (max-width: 650px) {
@@ -174,7 +220,7 @@ const Imagen = styled.img`
    /* border: 2px solid purple; */
 `;
 
-const Titulo = styled.h2`
+const TituloProductos = styled.h2`
   font-size:18px;
   color: #fff;
   padding: 0px;
