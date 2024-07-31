@@ -9,6 +9,7 @@ import Footer from "./components/Footer"
 import Contacto from "../src/paginas/Contacto"
 import MediosDePago from "./paginas/MediosDePago";
 import QuienesSomos from "./paginas/QuienesSomos";
+import Productos from "./paginas/Productos"
 function App() {
 
   return (
@@ -21,6 +22,7 @@ function App() {
       <Contacto/>
       <MediosDePago/>
       <QuienesSomos/>
+      <Productos/>
       <Footer/>
 
 

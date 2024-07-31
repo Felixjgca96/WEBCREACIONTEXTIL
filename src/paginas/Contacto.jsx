@@ -15,6 +15,7 @@ function ContactForm() {
   }
   return (
     <Formulario>
+      <h2>Formulario de Contacto</h2>
       <form onSubmit={handleSubmit} >
         <div className='labelyimput'>
             <label htmlFor="nombre" >Nombre</label>
@@ -54,7 +55,10 @@ function ContactForm() {
 export default ContactForm;
 
 const Formulario = styled.div`
-
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
   form {
     width: 900px;
     padding: 10px;
