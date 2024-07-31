@@ -65,6 +65,7 @@ width: 99%;
 .Container {
     position: relative;
     border: 2px solid #ccc;
+    border-radius:10px;
     display: flex;
     justify-content: center;
     align-items: center;

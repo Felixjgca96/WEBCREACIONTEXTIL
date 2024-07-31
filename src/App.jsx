@@ -8,6 +8,7 @@ import CarruselProductos from "./components/CarruselProductos";
 import Footer from "./components/Footer"
 import Contacto from "../src/paginas/Contacto"
 import MediosDePago from "./paginas/MediosDePago";
+import QuienesSomos from "./paginas/QuienesSomos";
 function App() {
 
   return (
@@ -19,6 +20,7 @@ function App() {
       <ButtonWa/>
       <Contacto/>
       <MediosDePago/>
+      <QuienesSomos/>
       <Footer/>
 
 
