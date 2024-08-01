@@ -3,10 +3,6 @@ import styled from 'styled-components'
 import BurguerButton from './BurguerButton';
 import { Link } from "react-router-dom";
 
-
-
-
-
 function Navbar ( ) {
 
   const [clicked, setClicked]= useState (false)
@@ -14,6 +10,10 @@ function Navbar ( ) {
     //cuando esta true lo pasa a false y vice versa
     setClicked(!clicked)
   }
+  const handleCloseMenu = () => {
+    setClicked(false)
+  }
+
   useEffect(() => {
     function handleResize() {
       if (window.innerWidth > 768) {
@@ -31,17 +31,18 @@ function Navbar ( ) {
           <img src="./logo.png" alt="" className='logo'/>
         </Link>
         <div className={`links ${clicked ? 'active' : ''}`}>
-          <Link to="/inicio">Inicio</Link>
-          <Link to="/productos">Productos</Link>
-          <Link to="/quienessomos">Quienes Somos</Link>
-          <Link to="/mediosdepago">Medios de Pago</Link>
-          <Link to="/contacto">Contacto</Link>
+          <Link to="/inicio" onClick={handleCloseMenu}>Inicio</Link>
+          <Link to="/productos" onClick={handleCloseMenu}>Productos</Link>
+          <Link to="/quienessomos" onClick={handleCloseMenu}>Quienes Somos</Link>
+          <Link to="/mediosdepago" onClick={handleCloseMenu}>Medios de Pago</Link>
+          <Link to="/contacto" onClick={handleCloseMenu}>Contacto</Link>
         </div>
         <div className='burguer'>
           <BurguerButton clicked={clicked} handleClick={handleClick}/>
         </div>
         <BgDiv className={`initial ${clicked ? 'active' : ''}`}></BgDiv>
       </NavContainer>
+
     </NavHero>
   );
 }
