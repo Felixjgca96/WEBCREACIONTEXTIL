@@ -4,7 +4,9 @@ import styled from 'styled-components';
 const QuienesSomos = () => {
   return (
     <Container>
-      <h2>Quienes Somos</h2>
+      <TitleContainer>
+        <h2>Quienes Somos</h2>
+      </TitleContainer>
       <MisionVision>
         <h3>Misión</h3>
         <p>Ofrecer servicios de personalización de textiles de alta calidad.</p>
@@ -56,6 +58,7 @@ const Container = styled.div`
     grid-template-columns: 1fr;
   }
 
+
   img {
   width: 100%;
   height: 200px;
@@ -75,6 +78,12 @@ const Container = styled.div`
     text-align: center;
     color: black;
   }
+`;
+const TitleContainer = styled.div`
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 
 const MisionVision = styled.div`

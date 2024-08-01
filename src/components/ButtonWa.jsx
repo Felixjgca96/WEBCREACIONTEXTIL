@@ -1,12 +1,16 @@
 import React from "react";
 import styled from 'styled-components'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
+
 
 function ButtonWa () {
     return (
+
         <ButtonWaChat>
-            <a href="https://api.whatsapp.com/send?phone=584248098877" className="btn-wsp" target="_blank">
-	            <i className="fa fa-whatsapp icono"></i>
-	        </a>
+            <a href="https://api.whatsapp.com/send?phone=584248098877&text=Hola,%20somos%20Creación%20Textil.%20Estamos%20para%20ayudarte:" className="btn-wsp" target="_blank">
+                <FontAwesomeIcon icon={faWhatsapp} />
+            </a>
         </ButtonWaChat>
     )
 }

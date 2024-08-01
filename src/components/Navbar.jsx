@@ -56,12 +56,14 @@ const NavHero = styled.nav`
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #18191a;
+  background-color: #121315;
   position: fixed;
   top: 0;
   margin: 0px auto;
   width: 100%;
   z-index: 10000;
+  border-bottom: 1px solid rgba(138, 208, 153, 0.36);
+
 
 
 
@@ -86,7 +88,7 @@ const NavContainer = styled.nav`
   gap: 20px;
   width: 100%;
   max-width: 1500px;
-  background-color: #18191a;
+  background-color: #121315;
 
 
   
@@ -228,10 +230,12 @@ transition: all .6s ease ;
 
 &.active{
   border-radius: 0 0 50% 50%;
-  top: 100px;
+  top: 105px;
   left: 0;
   width: 100%;
   height: 450px;
+  border-bottom: 5px solid rgba(138, 208, 153, 0.36);
+
 
   
 }

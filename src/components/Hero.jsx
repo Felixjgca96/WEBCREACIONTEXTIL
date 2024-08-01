@@ -52,8 +52,8 @@ const PruebaHero = styled.div`
   align-items: center;
   margin-top:50px ;
   .hero-image {
-    height: 100%;
     width: 100%;
+    height: 100%;
     background-size: cover;
     background-position: center;
     display: flex;
@@ -64,11 +64,18 @@ const PruebaHero = styled.div`
   .hero-content {
     color: #fff;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
   }
 `;
 
 
 const ButtonContactanos = styled.div`
+    margin-top: 30px;
+
   .hero__boton {
     padding: 10px 20px; 
 
@@ -78,13 +85,13 @@ const ButtonContactanos = styled.div`
     cursor: pointer;
     margin: 10px;
     color: white;
-    background-color: #222;
+    background-color: black;
     opacity: 80%;
 
   }
 
   .hero__boton:hover {
-    background-color: black;
+    background-color: #222;
     transition: background-color 0.3s;
     opacity: 100%;
   }

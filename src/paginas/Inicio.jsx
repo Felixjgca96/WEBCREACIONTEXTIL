@@ -23,6 +23,8 @@ const InicioSection = styled.div`
   justify-content: center;
   align-items: center;
   text-align: center;
-  margin-top: 120px;
+  margin-top: 110px;
+  margin-bottom:10px ;
+
 
 `

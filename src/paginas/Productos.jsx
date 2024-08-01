@@ -135,6 +135,8 @@ const ProductoContainer = styled.div`
   justify-content: center;
   /* border: 2px solid yellow; */
   margin-top: 130px;
+  margin-bottom:30px ;
+
 
 
 `;

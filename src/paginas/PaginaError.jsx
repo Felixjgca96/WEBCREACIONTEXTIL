@@ -4,12 +4,10 @@ import { Link } from 'react-router-dom'
 
 function PaginaError  ()  {
   return (
-
     <ErrorSection>
         <section className="contenido">
             <img className='contenido__img--espanta' src="./error.webp" alt="pagina error" width="300" height="400" />
         </section>
-
         <section className='contenido'>
             <div className="header__titulo">
                 <h4>404 NOT FOUND</h4>
@@ -25,12 +23,7 @@ function PaginaError  ()  {
                     <Link className='section__botones--contenido__btn' to="/inicio">Regresa al Inicio</Link>
                 </div>
             </section>
-
         </section>
-
-        
-
-
     </ErrorSection>
   )
 }
@@ -38,7 +31,7 @@ function PaginaError  ()  {
 export default PaginaError
 
 const ErrorSection = styled.div`
-margin-top:120px ;
+margin-top:100px ;
 display: flex;
 justify-content: center;
 align-items: center;
@@ -48,15 +41,16 @@ background-color: #121315;
 padding:20px;
 max-width:1500px;
 max-width: 99%;
+padding-top: 30px;
+margin-bottom: 0px;
 @media (max-width: 630px) {
     
     flex-direction: column;
     gap: 0;
-    
-  }
+    }
 
 
-  .contenido {
+.contenido {
     width: 280px;
     height: 280px;
     display: flex;

@@ -86,11 +86,13 @@ export default Footer;
 const FooterSection = styled.div`
   
   box-sizing: border-box;
-  margin: 20px 0 0 0;
-  padding: 0;
+  margin: 0 0 0 0;
+  padding: 20px 0 0 0;
   color: #fff;
   background: #121315;
   width: 100%;
+  border-top: 1px solid rgba(138, 208, 153, 0.36);
+
 
 ul {
   list-style: none;
@@ -163,10 +165,14 @@ a {
   color: #94fbab;
 }
 .footer-bottom {
+
+  border-top: 1px solid rgba(138, 208, 153, 0.36);
+  padding: 1em;
   display: flex;
   justify-content: center;
-  border-top: 1px solid rgba(138, 208, 153, 0.36);
-  padding: 2em;
+  text-align: center;
+  align-items: center;
+
 }
 .col2 {
     display: flex;
@@ -203,6 +209,11 @@ a {
 }
 
 .mekk p {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+
   @media(max-width: 450px) {
     font-size:10px
         

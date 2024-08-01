@@ -60,6 +60,8 @@ flex-direction: column;
 justify-content: center;
 align-items: center;
 margin-top: 150px;
+margin-bottom:30px ;
+
 
 
   form {

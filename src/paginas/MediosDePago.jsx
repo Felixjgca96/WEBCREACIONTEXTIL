@@ -53,6 +53,8 @@ flex-direction: column;
 justify-content: center;
 align-items: center;
 margin-top: 170px;
+margin-bottom:30px ;
+
 
 @media(max-width: 400px) {
 
