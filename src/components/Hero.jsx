@@ -31,7 +31,7 @@ function Hero() {
           <h1>{heroes[currentIndex].titulo}</h1>
           <p>{heroes[currentIndex].descripcion}</p>
           <ButtonContactanos>
-            <a href="https://api.whatsapp.com/send?phone=584248098877" class="hero__boton" target="_blank">
+            <a href="https://api.whatsapp.com/send?phone=584248098877&text=Hola,%20somos%20Creación%20Textil.%20Estamos%20para%20ayudarte:" class="hero__boton" target="_blank">
 	            Contáctanos
 	        </a>
           </ButtonContactanos>
@@ -60,7 +60,11 @@ const PruebaHero = styled.div`
     justify-content: center;
     align-items: center;
     border-radius: 20px;
+    border: 2px solid white;
+
+    
   }
+  
   .hero-content {
     color: #fff;
     text-align: center;
@@ -86,12 +90,13 @@ const ButtonContactanos = styled.div`
     margin: 10px;
     color: white;
     background-color: black;
-    opacity: 80%;
+    border: 2px solid white;
 
   }
 
   .hero__boton:hover {
-    background-color: #222;
+    background-color: white;
+    color: black;
     transition: background-color 0.3s;
     opacity: 100%;
   }

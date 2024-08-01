@@ -112,11 +112,24 @@ const NavContainer = styled.nav`
     width:90px;
     display: flex;
     margin: 5px;
+    padding: 2px;
+
+    &:hover {
+      background-color:white;
+      border-radius:45px;
+    }
+
 
   }
   img.logo {
 
     margin-left:1rem;
+    :hover {
+
+    background-color: red;
+    color: green;
+
+    }
 
   }
 

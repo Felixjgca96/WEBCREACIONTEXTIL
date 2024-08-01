@@ -11,7 +11,7 @@ function Footer() {
           <a href="#" className="Nombre">Creación Textil</a>
           <ul className="media-icons">
             <li>
-              <a href="https://api.whatsapp.com/send?phone=584248098877" target="_blank">
+              <a href="https://api.whatsapp.com/send?phone=584248098877&text=Hola,%20somos%20Creación%20Textil.%20Estamos%20para%20ayudarte:" target="_blank">
                 <i className="fa-brands fa-whatsapp" />
               </a>
             </li>
