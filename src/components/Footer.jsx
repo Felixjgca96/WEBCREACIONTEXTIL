@@ -1,5 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom'
+
 
 function Footer() {
   return (
@@ -31,17 +33,13 @@ function Footer() {
           </ul>
         </div>
         <div className="col2">
-          <ul className="menu">
-            <li>
-              <a href="#">Productos</a>
-            </li>
-            <li>
-              <a href="#">Servicios</a>
-            </li>
-            <li>
-              <a href="#">Contacto</a>
-            </li>
-          </ul>
+          <div className="menu">
+          <Link to="/productos">Productos</Link>
+          <Link to="/mediosdepago">Medios de Pago</Link>
+          <Link to="/contacto">Contacto</Link>
+
+          </div>
+
           <p>
             Empresa especializada en personalización de textiles y muebles mediante bordado, estampado, sublimación y tapizado. Su equipo de expertos ofrece soluciones personalizadas y únicas.
             </p>
@@ -187,7 +185,9 @@ a {
   padding: 0;
   margin-bottom: 1em;
   gap: 10px;
-
+  @media(max-width: 400px) {
+    font-size: 13px;
+  }
 }
 
 .menu li a {
@@ -202,6 +202,11 @@ a {
   color: #94fbab;
 }
 
-
+.mekk p {
+  @media(max-width: 450px) {
+    font-size:10px
+        
+    }
+}
 
 `

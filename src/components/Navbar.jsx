@@ -1,11 +1,14 @@
 import React, {useState, useEffect} from 'react';
 import styled from 'styled-components'
 import BurguerButton from './BurguerButton';
-import Hero from './Hero';
+import { Link } from "react-router-dom";
+
+
 
 
 
 function Navbar ( ) {
+
   const [clicked, setClicked]= useState (false)
   const handleClick = () => {
     //cuando esta true lo pasa a false y vice versa
@@ -22,42 +25,45 @@ function Navbar ( ) {
   }, []);
 
   return (
-      <NavHero>
+    <NavHero>
       <NavContainer>
-        <a href="">
+        <Link to="/inicio">
           <img src="./logo.png" alt="" className='logo'/>
-        </a>
-          
-        <div className= {`links ${clicked ? 'active' : ''}`}>
-            <a href="/">Inicio</a>
-            <a href="/">Productos</a>
-            <a href="/">Quienes Somos</a>
-            <a href="/">Medios de Pago</a>
-            <a href="/">Contacto</a>
+        </Link>
+        <div className={`links ${clicked ? 'active' : ''}`}>
+          <Link to="/inicio">Inicio</Link>
+          <Link to="/productos">Productos</Link>
+          <Link to="/quienessomos">Quienes Somos</Link>
+          <Link to="/mediosdepago">Medios de Pago</Link>
+          <Link to="/contacto">Contacto</Link>
         </div>
         <div className='burguer'>
-        <BurguerButton clicked={clicked} handleClick={handleClick}/>
+          <BurguerButton clicked={clicked} handleClick={handleClick}/>
         </div>
         <BgDiv className={`initial ${clicked ? 'active' : ''}`}></BgDiv>
       </NavContainer>
-      </NavHero>
-  )  
+    </NavHero>
+  );
 }
+
 export default Navbar
 
 const NavHero = styled.nav`
-  display: flex;
+  /* display: flex;
   flex-direction:column;
-  width: 100%;
-  max-width: 1500px;
-  z-index: 1000;
+  width: 100%; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #18191a;
 
 
 
 
 `
 const NavContainer = styled.nav`
-  display: flex;
+  /* display: flex;
+  justify-content: center;
   align-items: center;
   justify-content: space-between;
   width: 100%;
@@ -65,7 +71,15 @@ const NavContainer = styled.nav`
   position: fixed; 
   top: 0;
   background-color: #121315;
- 
+   z-index: 1000; */
+   height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2px 10px;
+  gap: 20px;
+  width: 100%;
+  max-width: 1500px;
 
   
 
@@ -129,7 +143,7 @@ const NavContainer = styled.nav`
       
 
     }
-    @media(min-width: 768px){
+    @media(min-width: 800px){
       position: initial;
       margin:0px;
       
@@ -188,7 +202,7 @@ const NavContainer = styled.nav`
   }
   
   .burguer {
-    @media(min-width: 768px){
+    @media(min-width: 800px){
       display: none;
     }
   }

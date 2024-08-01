@@ -72,7 +72,6 @@ const Productos = () => {
 
 export default Productos;
 
-// Estilos
 const CategoriasProductos = styled.div`
   display: flex;
   flex-wrap: wrap;
@@ -114,7 +113,6 @@ const Imagen = styled.img`
   height: 50px;
   @media (max-width: 600px) {
     margin: 0px;
-    
   }
 
 `;
@@ -127,17 +125,14 @@ const Titulo = styled.h3`
 
   @media (max-width: 600px) {
     margin: 0px;
-    
   }
 `;
 
 const ProductoContainer = styled.div`
-  width: 99%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  max-width: 1300px;
   /* border: 2px solid yellow; */
 
 `;
@@ -195,8 +190,12 @@ const ProductoItem = styled.div`
   }
 
   @media (max-width: 510px) {
-    width: 280px;
-    height: 150px;
+    width: 120px;
+    height: 160px;
+    flex-direction:column;
+    justify-content: center;
+    gap: 10px;
+
   }
 
 `;
@@ -214,8 +213,10 @@ const ImagenProductos = styled.img`
     height: 110px;
   }
   @media (max-width: 510px) {
-    width: 130px;
-    height: 130px;
+    width: 120px;
+    height: 120px;
+    padding: 0;
+    margin: 0;
   }
    /* border: 2px solid purple; */
 `;
@@ -229,6 +230,14 @@ const TituloProductos = styled.h2`
   /* border: 2px solid red; */
   @media (max-width: 650px) {
     font-size:13px;
+  }
+  @media (max-width: 510px) {
+    font-size:12px;
+    padding: 0;
+    margin: 0;
+    
+    
+
   }
 
 `;

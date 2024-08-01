@@ -4,8 +4,8 @@ import styled from 'styled-components'
 function ButtonWa () {
     return (
         <ButtonWaChat>
-            <a href="https://api.whatsapp.com/send?phone=584248098877" class="btn-wsp" target="_blank">
-	            <i class="fa fa-whatsapp icono"></i>
+            <a href="https://api.whatsapp.com/send?phone=584248098877" className="btn-wsp" target="_blank">
+	            <i className="fa fa-whatsapp icono"></i>
 	        </a>
         </ButtonWaChat>
     )

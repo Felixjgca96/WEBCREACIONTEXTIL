@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 
-const Carrusel = () => {
+const CarruselProductos = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isNextDisabled, setIsNextDisabled] = useState(false);
   const [isPrevDisabled, setIsPrevDisabled] = useState(true);
@@ -69,7 +69,7 @@ const Carrusel = () => {
     </CarruselContainer>
   );
 };
-export default Carrusel;
+export default CarruselProductos;
 
 const CarruselContainer = styled.div`
   position: relative;

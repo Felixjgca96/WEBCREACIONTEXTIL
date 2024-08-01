@@ -52,9 +52,7 @@ display: flex;
 flex-direction: column;
 justify-content: center;
 align-items: center;
-width: 80%;
-max-width: 1500px;
-margin-top: 80px;
+margin-top: 60px;
 
 @media(max-width: 400px) {
 

@@ -4,25 +4,25 @@ import styled from 'styled-components'
 function Services ( ) {
   return (
     <ServicesSection>
-        <section class="services-section">
-            <article class="services__cards container">
-                <div class="services__cards-info">
+        <section className="services-section">
+            <article className="services__cards container">
+                <div className="services__cards-info">
                     <h2>Acerca de Nuestros Servicios</h2>
                     <p>Misión, garantía y servicios de alta calidad para ti.</p>
                 </div>   
-                <div class="services__cards-card">
-                    <div class="service__card">
-                        <i class="bi bi-brightness-alt-high-fill"></i>
+                <div className="services__cards-card">
+                    <div className="service__card">
+                        <i className="bi bi-brightness-alt-high-fill"></i>
                         <h3>Nuestra Misión</h3>
                         <p>Nos enfocamos en ofrecer soluciones de alta calidad en costura y tapizado, personalizadas para satisfacer las necesidades específicas de cada cliente. Contáctanos para explorar nuestros servicios</p>
                     </div>
-                    <div class="service__card">
-                        <i class="bi bi-bicycle"></i>
+                    <div className="service__card">
+                        <i className="bi bi-bicycle"></i>
                         <h3>Garantía de Entrega</h3>
                         <p>Ofrecemos un servicio de logística eficiente y segura, con transporte especializado y embalaje experto, para garantizar la entrega puntual y en perfectas condiciones de nuestros productos de costura y tapizado.</p>
                     </div>
-                    <div class="service__card">
-                        <i class="bi bi-rainbow"></i>
+                    <div className="service__card">
+                        <i className="bi bi-rainbow"></i>
                         <h3>Nuestros Servicios</h3>
                         <p>Ofrecemos prendas a medida, tapizado de muebles, bordados personalizados, estampados en textiles y materiales, e impresión de imágenes en productos.</p>
                     </div>

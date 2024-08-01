@@ -7,16 +7,12 @@ function Hero() {
     {
       imagen: './hero1.jpg',
       titulo: 'Bordados con calidad',
-      descripcion: 'Trabajo responsable y rápido. ',
+      descripcion: 'Trabajo responsable, rápido y excelente atención. ',
     },
-    {
-      imagen: './hero2.jpg',
-      titulo: 'Atención personalizada',
-      descripcion: 'Excelente atención y buena presencia.',
-    },
+
     {
         imagen: './hero3.jpg',
-        titulo: 'Detalles perfectos',
+        titulo: 'Detalles perfectos y atención personalizada',
         descripcion: 'Buena capacidad de finalizacion en cada detalle.',
     },
   ];
@@ -54,7 +50,7 @@ const PruebaHero = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top:110px ;
+  margin-top:50px ;
   .hero-image {
     height: 100%;
     width: 100%;
