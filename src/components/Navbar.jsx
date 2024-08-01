@@ -56,7 +56,10 @@ const NavHero = styled.nav`
   justify-content: center;
   align-items: center;
   background-color: #18191a;
-
+  position: fixed;
+  top: 0;
+  margin: 0px auto;
+  width: 100%;
 
 
 
@@ -80,6 +83,9 @@ const NavContainer = styled.nav`
   gap: 20px;
   width: 100%;
   max-width: 1500px;
+  z-index: 1000;
+  background-color: #18191a;
+
 
   
 

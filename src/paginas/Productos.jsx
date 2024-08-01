@@ -134,6 +134,8 @@ const ProductoContainer = styled.div`
   align-items: center;
   justify-content: center;
   /* border: 2px solid yellow; */
+  margin-top: 130px;
+
 
 `;
 
